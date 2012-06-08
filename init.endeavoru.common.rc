@@ -122,6 +122,13 @@ insmod /system/lib/modules/kineto_gan.ko
     mkdir /data/RXN/RXN/pred
     chmod 777 /system/bin/RXN_IntApp
 
+# Create missing GPS Folders
+
+    mkdir /data/tigps
+    mkdir /data/tigps/aiding
+    mkdir /data/tigps/etc
+    mkdir /data/tigps/logs
+
 #NFC
     setprop ro.nfc.port "I2C"
     chmod 0660 /dev/pn544

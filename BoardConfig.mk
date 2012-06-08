@@ -65,6 +65,8 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wl12xx
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wl12xx_sdio.ko"
 WIFI_DRIVER_MODULE_NAME     :=  "wl12xx_sdio"
 
+TARGET_PREBUILT_KERNEL := device/htc/endeavoru/kernel
+
 # Kernel building
 TIWLAN_MODULES:
 	cp device/htc/endeavoru/modules/cfg80211.ko $(KERNEL_MODULES_OUT)
@@ -76,3 +78,13 @@ TIWLAN_MODULES:
 TARGET_KERNEL_MODULES := TIWLAN_MODULES
 TARGET_KERNEL_SOURCE := kernel/htc/endeavor
 TARGET_KERNEL_CONFIG :=  endeavoru_android_defconfig
+
+DEVICE_RESOLUTION := 720x1280
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+#TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+#TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+#TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_NO_USB_STORAGE := true
